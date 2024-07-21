@@ -81,19 +81,26 @@
     font-size: 25px;
     font-family: var(--header-font-family);
 }
-.currency {
+#currency {
     margin-right: 20px;
 }
 .ed ul {
     width: 150px;
 }
 
+/* javascript classes */
+.hidden {
+    display: none;
+}
+
+
+
 
 @media(max-width: 1000px) {
     .landing-page-top-container {
         justify-content: center;
     }
-    .currency {
+    #currency {
         margin-left: 50px;
     }
 }
@@ -125,7 +132,7 @@
     .landing-number {
         margin-bottom: 10px;
     }
-    .currency {
+    #currency {
         margin-left: 0;
     }
     .use-choice {
