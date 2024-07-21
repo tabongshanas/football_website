@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --secondary-color: #F22361;
+    --grey-color: #636363;
+    --header-font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.landing-page-top-container {
+    background-color: var(--grey-color);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.phone-info {
+    text-decoration: none;
+    color: white;
+}
+.phone-info:hover {
+    cursor: pointer;
+    color: #d8d8d8;
+}
+.phone-info .fa {
+    font-weight: 800;
+    font-size: 25px;
+    margin-right: 10px;
+}
+.landing-number span {
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.landing-currency-language-container {
+    display: flex;
+    position: relative;
+}
+.landing-currency {
+    display: flex;
+    justify-content: center;
+}
+.landing-currency ul {
+    position: absolute;
+    background-color: var(--grey-color);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top:43px;
+    line-height: 30px;
+    list-style: none;
+    text-transform: capitalize;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.landing-currency ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+.landing-currency ul li a:hover {
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+.use-choice {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 20px;
+}
+.use-choice span {
+    font-weight: 900;
+    font-size: 25px;
+    font-family: var(--header-font-family);
+}
+.currency {
+    margin-right: 20px;
+}
+.ed ul {
+    width: 150px;
+}
+
+
+@media(max-width: 1000px) {
+    .landing-page-top-container {
+        justify-content: center;
+    }
+    .currency {
+        margin-left: 50px;
+    }
+}
+@media(max-width: 740px) {
+    .use-choice span {
+        font-size: 20px;
+    }
+    .landing-number span {
+        font-size: 15px;
+    }
+    .landing-page-top-container {
+        padding: 15px;
+    }
+}
+@media(max-width: 660px) {
+    .landing-number span {
+        display: none;
+    }
+    .landing-page-top-container {
+        justify-content: space-between;
+    }
+}
+@media(max-width: 490px) {
+    .landing-page-top-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .landing-number {
+        margin-bottom: 10px;
+    }
+    .currency {
+        margin-left: 0;
+    }
+    .use-choice {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+}
+@media(max-width: 350px) {
+    .ed ul {
+        width: 100px;
+    }
+}
