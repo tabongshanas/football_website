@@ -5,6 +5,7 @@
 }
 
 :root {
+    --backround-color: #333333;
     --secondary-color: #F22361;
     --grey-color: #636363;
     --header-font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -55,6 +56,7 @@
     margin-top:43px;
     line-height: 30px;
     list-style: none;
+    z-index: 100;
     text-transform: capitalize;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -143,5 +145,327 @@
 @media(max-width: 350px) {
     .ed ul {
         width: 100px;
+    }
+}
+
+
+
+
+.logo-search-link-container {
+    background-color: var(--backround-color);
+    padding-bottom: 20px;
+}
+.logo-search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 830px;
+}
+
+.search-nav-container {
+    display: flex;
+}
+.search {
+    display: flex;
+}
+
+.navicon {
+    margin-right: 10px;
+}
+.navicon i {
+    font-size: 25px;
+    color: white;
+    background-color: var(--secondary-color);
+    padding: 8px 15px;
+    border-radius: 7px;
+}
+.input input {
+    outline: none;
+    padding: 11px 20px;
+    font-size: 20px;
+    background-color: #1F1F1F;
+    color: white;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 330px;
+}
+.search-icon i {
+    font-size: 25px;
+    color: white;
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.3s;
+}
+.search-icon i:hover {
+    cursor: pointer;
+    background-color: #da1d56;
+}
+
+.market {
+    margin-left: 10px;
+}
+.market i {
+    color: white;
+    background-color: var(--secondary-color);
+    font-size: 27px;
+    border-radius: 10px;
+    padding: 7px 17px;
+    position: relative;
+    border: 2px solid var(--secondary-color);
+    transition: 0.3s;
+}
+.market i:hover {
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+.market i::after {
+    content: '2';
+    position: absolute;
+    top: -7px;
+    right: -7px;
+    background-color: white;
+    color: var(--secondary-color);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.market:hover.market i::after {
+    border: 2px solid var(--secondary-color);
+}
+
+
+.shopping-container {
+    position: absolute;
+    right: 30px;
+    background-color: #373737;
+    width: 310px;
+    padding: 10px 20px 20px 20px;
+}
+.content-item {
+    display: flex;
+    justify-content: space-between;
+}
+.content-item.ed {
+    margin-top: 30px;
+}
+.item-text-container {
+    display: flex;
+    align-items: center;
+}
+.item img {
+    width: 90px;
+}
+.item a {
+    background-color: var(--grey-color);
+}
+.item-text {
+    color: white;
+    font-family: var(--header-font-family);
+    font-weight: 500;
+    line-height: 40px;
+    margin-left: 20px;
+}
+.shirt a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+.shirt a:hover {
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+.item-close i {
+    background-color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.product-price-container {
+    display: flex;
+    justify-content: space-between;
+}
+.main-product-price-container {
+    margin-top: 30px;
+    line-height: 35px;
+}
+.product {
+    text-transform: capitalize;
+    font-family: var(--header-font-family);
+    font-weight: 550;
+    color: white;
+    font-size: 16px;
+}
+.price {
+    color: white;
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.price.ed {
+    color: var(--secondary-color);
+}
+
+
+.item-btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.main-item-btn a {
+    text-decoration: none;
+    background-color: var(--secondary-color);
+    color: white;
+    font-family: var(--header-font-family);
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 10px 20px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.main-item-btn a:hover {
+    border: 2px solid white;
+    background-color: #b91d4c;
+}
+
+
+#nav-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#nav-link li {
+    display: block;
+    list-style: none;
+    position: relative;
+    margin-right: 25px;
+}
+
+#nav-link li:hover > .fix-margin {
+    display: inline-block;
+}
+
+#nav-link li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    position: relative;
+    transition: 0.5s;
+    font-size: 15px;
+    font-weight: 550;
+    font-family: var(--header-font-family);
+}
+#nav-link li a:hover {
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+#nav-link li a::before {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    opacity: 0;
+    transition: 0.6s;
+    background-color: var(--secondary-color);
+}
+#nav-link li a:hover::before {
+    width: 100%;
+    opacity: 1;
+}
+
+#sub-menu ul {
+    position: absolute;
+    background-color: var(--grey-color);
+    width: 190px;
+    padding: 10px 0 10px 15px;
+    line-height: 40px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.fix-margin {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    z-index: 100;
+    display: none;
+}
+
+
+@media(max-width: 890px) {
+    .input input {
+        width: 250px;
+    }
+}
+
+@media(max-width: 710px) {
+    .input input {
+        width: 160px;
+    }
+}
+@media(max-width: 600px) {
+    .logo-search-container {
+        flex-direction: column;
+    }
+    .input input {
+        width: 400px;
+    }
+    .logo {
+        margin-bottom: 20px;
+    }
+}
+@media(max-width: 580px) {
+    .input input {
+        width: 300px;
+    }
+    .logo {
+        width: 430px;
+    }
+}
+@media(max-width: 480px) {
+    .input input {
+        width: 200px;
+    }
+    .logo {
+        width: 330px;
+    }
+}
+@media(max-width: 380px) {
+    .input input {
+        width: 100%;
+    }
+    .logo {
+        width: 100%;
+    }
+    .logo-search-container {
+        padding: 20px 15px;
+    }
+    .shopping-container {
+        right: 10px;
     }
 }
