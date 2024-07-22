@@ -607,13 +607,32 @@ li {
 
 
 
+.landing-page-content {
+    background-image: url(/images/landing_image1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 16/9;
+
+    animation: change_background_image 20s ease-in-out infinite;
+}
+
+@keyframes change_background_image {
+    from {
+        background-image: url(/images/landing_image1.png);
+    }
+    to {
+        background-image: url(/images/landing_image2.png);
+    }
+}
+
 
 /* javascript classes */
 .hidden {
     display: none;
 }
 .sliding-left-content {
-    left: -100%;
+    left: -120%;
 }
 .sliding-right-content {
     left: 0;
