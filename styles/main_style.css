@@ -4,9 +4,14 @@
     box-sizing: border-box;
 }
 
+li {
+    list-style: none;
+}
+
 :root {
+    /* --primary-light-color: #636363; */
     --backround-color: #333333;
-    --secondary-color: #F22361;
+    --secondary-color: #d63384;
     --grey-color: #636363;
     --header-font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -415,6 +420,105 @@
     z-index: 100;
     display: none;
 }
+
+/* menu for responsive */
+.menu-container {
+    width: 250px;
+    background-color: var(--grey-color);
+    position: absolute;
+    top: 0;
+    height: 100vh;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 10px;
+}
+.menu-text {
+    text-transform: capitalize;
+    font-family: var(--header-font-family);
+    font-weight: 550;
+    font-size: 20px;
+}
+.menu-icon i {
+    font-size: 25px;
+}
+
+.menu-link {
+    padding: 0 10px;
+}
+.menu-link ul {
+    line-height: 40px;
+}
+.menu-link ul li {
+    color: white;
+    transition: 0.4s;
+    white-space: nowrap;
+}
+/* .menu-link ul li:hover {
+    cursor: pointer;
+    color: var(--secondary-color);
+} */
+.menu-link ul li i {
+    font-size: 25px;
+    font-weight: 500;
+    /* margin-left: 40px; */
+}
+.menu-link ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    font-family: var(--header-font-family);
+    transition: 0.4s;
+}
+.menu-link ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.menu-link ul li span:hover {
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+.menu-link ul li span:hover a {
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+.link-hover a:hover {
+    color: var(--secondary-color);
+}
+
+.menu-link span {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.4s;
+}
+.menu-link-sub.ed ul {
+    list-style: none;
+}
+.menu-link-sub.ed {
+    margin-left: 10px;
+}
+
+/* individual for javascript purpose */
+#menu-matches-content {
+    margin-left: 10px;
+}
+#menu-recent-content {
+    margin-left: 10px;
+}
+#menu-players-content {
+    margin-left: 10px;
+}
+#menu-top-players-content {
+    margin-left: 10px;
+}
+
 
 
 @media(max-width: 890px) {
