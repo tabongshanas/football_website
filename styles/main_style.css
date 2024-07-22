@@ -9,7 +9,7 @@ li {
 }
 
 :root {
-    /* --primary-light-color: #636363; */
+    --primary-light-color: #636363;
     --backround-color: #333333;
     --secondary-color: #d63384;
     --grey-color: #636363;
@@ -258,11 +258,12 @@ li {
 .shopping-container {
     position: absolute;
     right: 30px;
-    background-color: #444444;
+    background-color: #3a3a3a;
     width: 310px;
     padding: 10px 20px 20px 20px;
     border-radius: 5px;
     margin-top: 10px;
+    z-index: 10000;
 }
 .content-item {
     display: flex;
@@ -337,7 +338,10 @@ li {
 .item-btns {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.main-item-btn {
+    margin-top: 20px;
 }
 .main-item-btn a {
     text-decoration: none;
@@ -351,6 +355,7 @@ li {
     border: 2px solid var(--secondary-color);
     border-radius: 10px;
     transition: 0.3s;
+    white-space: nowrap;
 }
 .main-item-btn a:hover {
     border: 2px solid white;
@@ -605,6 +610,13 @@ li {
     }
 }
 
+@media(max-width: 400px) {
+    .shopping-container {
+        width: 100%;
+        right: 0;
+    }
+}
+
 
 
 .landing-page-content {
@@ -625,6 +637,188 @@ li {
         background-image: url(/images/landing_image2.png);
     }
 }
+
+
+.upcoming-match-container {
+    background-color: var(--backround-color);
+    padding-top: 100px;
+}
+.foot-header-container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+.foot-header {
+    text-transform: capitalize;
+    font-family: var(--header-font-family);
+    font-weight: 600;
+    font-size: 30px;
+    color: white;
+    z-index: 100;
+    padding: 0 20px;
+    background-color: var(--backround-color);
+}
+.horizontal-line {
+    background-color: var(--secondary-color);
+    height: 3px;
+    width: 700px;
+    position: absolute;
+}
+
+
+.upcoming-match-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.two-upcoming-match {
+    display: flex;
+}
+.teams-container {
+    width: 250px;
+    background-color: #444444;
+    padding: 12px 10px 30px 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.teams-container.ed2 {
+    margin: 0 30px;
+}
+.teams-container.ed4 {
+    margin-left: 30px;
+}
+
+.teams-container:hover {
+    border: 1px solid var(--secondary-color);
+}
+.team-text {
+    color: white;
+    text-transform: capitalize;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.team-text b {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.main-teams-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.team-image {
+    background-color: #636363;
+    width: fit-content;
+    padding: 7px 5px;
+    border-radius: 10px;
+}
+.team-image img {
+    width: 80px;
+}
+
+.team-image-text {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+
+@media (max-width: 1150px) {
+    .teams-container {
+        width: 200px;
+    }
+    .team-image img {
+        width: 60px;
+    }
+}
+
+@media (max-width: 940px) {
+    .upcoming-match-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .teams-container {
+        width: 280px;
+    }
+    .team-image img {
+        width: 80px;
+    }
+
+    .teams-container.ed2 {
+        margin: 0;
+        margin-left: 30px;
+    }
+    .teams-container.ed4 {
+        margin-left: 30px;
+    }
+
+    .two-upcoming-match.margin-top {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 770px) {
+    .horizontal-line {
+        width: 600px;
+    }
+}
+@media (max-width: 640px) {
+    .teams-container {
+        width: 200px;
+    }
+    .team-image img {
+        width: 60px;
+    }
+
+    .horizontal-line {
+        width: 400px;
+    }
+    .foot-header {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 470px) {
+    .two-upcoming-match {
+        flex-direction: column;
+    }
+    .teams-container.ed2 {
+        margin: 0;
+        margin: 20px 0;
+    }
+    .teams-container.ed4 {
+        margin: 0;
+        margin-top: 20px;
+    }
+    .two-upcoming-match.margin-top {
+        margin-top: 0;
+    }
+
+    .teams-container {
+        width: 100%;
+    }
+    .two-upcoming-match {
+        width: 90%;
+    }
+    .team-image img {
+        width: 100px;
+    }
+}
+@media (max-width: 430px) {
+    .foot-header {
+        padding: 0 10px;
+    }
+    .horizontal-line {
+        width: 300px;
+    }
+}
+
 
 
 /* javascript classes */
