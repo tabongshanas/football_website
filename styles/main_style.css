@@ -60,6 +60,7 @@ li {
     border-radius: 10px;
     margin-top:43px;
     line-height: 30px;
+    width: 170px;
     list-style: none;
     z-index: 100;
     text-transform: capitalize;
@@ -95,10 +96,6 @@ li {
     width: 150px;
 }
 
-/* javascript classes */
-.hidden {
-    display: none;
-}
 
 
 
@@ -190,6 +187,8 @@ li {
     background-color: var(--secondary-color);
     padding: 8px 15px;
     border-radius: 7px;
+    cursor: pointer;
+    display: none;
 }
 .input input {
     outline: none;
@@ -259,9 +258,11 @@ li {
 .shopping-container {
     position: absolute;
     right: 30px;
-    background-color: #373737;
+    background-color: #444444;
     width: 310px;
     padding: 10px 20px 20px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 .content-item {
     display: flex;
@@ -421,6 +422,8 @@ li {
     display: none;
 }
 
+
+
 /* menu for responsive */
 .menu-container {
     width: 250px;
@@ -428,6 +431,11 @@ li {
     position: absolute;
     top: 0;
     height: 100vh;
+    z-index: 10000;
+    transition: 0.5s;
+}
+.main-menu-container {
+    transition: 0.5s;
 }
 
 .menu-header {
@@ -449,7 +457,7 @@ li {
 }
 
 .menu-link {
-    padding: 0 10px;
+    padding: 0 15px;
 }
 .menu-link ul {
     line-height: 40px;
@@ -519,8 +527,30 @@ li {
     margin-left: 10px;
 }
 
+#layer {
+    background-color: rgba(0, 0, 0, 0.459);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    filter: blur(15px);
+}
 
 
+
+@media(max-width: 960px) {
+    .navicon i {
+        display: inline-block;
+    }
+    #nav-link {
+        display: none;
+    }
+    .logo-search-link-container {
+        padding-bottom: 0;
+    }
+}
 @media(max-width: 890px) {
     .input input {
         width: 250px;
@@ -541,6 +571,7 @@ li {
     }
     .logo {
         margin-bottom: 20px;
+        width: 550px;
     }
 }
 @media(max-width: 580px) {
@@ -572,4 +603,18 @@ li {
     .shopping-container {
         right: 10px;
     }
+}
+
+
+
+
+/* javascript classes */
+.hidden {
+    display: none;
+}
+.sliding-left-content {
+    left: -100%;
+}
+.sliding-right-content {
+    left: 0;
 }
