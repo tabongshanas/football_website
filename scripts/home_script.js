@@ -16,6 +16,10 @@ const menuDisplayIcon = document.getElementById('menu-display-icon');
 const layer = document.getElementById('layer');
 const displayNav = document.getElementById('display-nav');
 
+// hebert classes clicking events
+const changePlayerRight = document.getElementById('change-player-right');
+const changePlayerLeft = document.getElementById('change-player-left');
+
 
 // selecting elements to hidden waiting for click
 const playersContent = document.querySelector('.players-content');
@@ -31,6 +35,13 @@ const menuPlayersContent = document.getElementById('menu-players-content');
 const menuTopPlayersContent = document.getElementById('menu-top-players-content');
 
 const menuContainer = document.querySelector('.menu-container');
+
+const hebertImage = document.getElementById('hebert-image');
+const shanasImage = document.getElementById('shanas-image');
+const hebertPlayerInfo = document.getElementById('hebert-player-info');
+const shanasPlayerInfo = document.getElementById('shanas-player-info');
+const hebertText = document.getElementById('hebert-text');
+const shanasText = document.getElementById('shanas-text');
 
 
 // reseting values in HTML
@@ -48,6 +59,12 @@ menuTopPlayersContent.classList.add('hidden');
 
 menuContainer.classList.add('sliding-left-content');
 layer.classList.add('hidden');
+
+
+// hebert player classes
+hebertImage.classList.add('hidden');
+hebertPlayerInfo.classList.add('hidden');
+hebertText.classList.add('hidden');
 
 
 
@@ -126,4 +143,24 @@ displayNav.addEventListener('click' , function() {
 menuDisplayIcon.addEventListener('click' , function() {
     menuContainer.classList.toggle('sliding-left-content');
     layer.classList.toggle('hidden');
+});
+
+
+// hebert shanas functionnality
+changePlayerRight.addEventListener('click' , function() {
+    shanasImage.classList.add('hidden');
+    hebertImage.classList.remove('hidden');
+    hebertPlayerInfo.classList.remove('hidden');
+    shanasPlayerInfo.classList.add('hidden');
+    hebertText.classList.remove('hidden');
+    shanasText.classList.add('hidden');
+});
+
+changePlayerLeft.addEventListener('click' , function() {
+    shanasImage.classList.remove('hidden');
+    hebertImage.classList.add('hidden');
+    hebertPlayerInfo.classList.add('hidden');
+    shanasPlayerInfo.classList.remove('hidden');
+    hebertText.classList.add('hidden');
+    shanasText.classList.remove('hidden');
 });
