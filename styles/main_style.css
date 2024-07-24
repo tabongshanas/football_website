@@ -7,6 +7,9 @@
 li {
     list-style: none;
 }
+abbr {
+    text-decoration: none;
+}
 
 :root {
     --primary-light-color: #636363;
@@ -1249,6 +1252,7 @@ li {
     display: flex;
     justify-content: center;
     margin-top: 40px;
+    padding: 0 10px;
 }
 .two-best-in-class {
     display: flex;
@@ -1292,6 +1296,67 @@ li {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+
+
+.good-goals-container {
+    background-image: url('/images/ban-2.png');
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+.good-goals-image img {
+    width: 500px;
+    margin-left: -100px;
+    padding-top: 100px;
+}
+
+.good-goals-header {
+    color: white;
+    text-transform: capitalize;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+}
+.good-goals-text {
+    color: white;
+    font-size: 20px;
+    font-family: cursive;
+    text-align: center;
+    line-height: 35px;
+    margin: 15px 0 30px 0;
+}
+
+.primary-btn {
+    text-align: center;
+}
+.primary-btn a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    font-family: var(--header-font-family);
+    text-transform: capitalize;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    border: 2px solid var(--secondary-color);
+    white-space: nowrap;
+}
+.primary-btn a:hover {
+    cursor: pointer;
+    background-color: #af296c;
+    border: 2px solid white;
+}
+
+
+
 @keyframes rotate_trophy {
     from {
         transform: rotateY(180deg);
@@ -1317,7 +1382,70 @@ li {
     .trophy-user {
         font-size: 20px;
     }
+    .good-goals-header {
+        font-size: 25px;
+    }
 }
+
+
+@media(max-width: 990px) {
+    .good-goals-image img {
+        width: 500px;
+        margin-left: -150px;
+    }
+}
+@media(max-width: 910px) {
+    .good-goals-container {
+        background-size: 950px;   
+    }
+    .good-goals-info {
+        width: 100%;
+    }
+}
+@media(max-width: 790px) {
+    .good-goals-image img {
+        width: 400px;
+        margin-left: -100px;
+    }
+    .good-goals-text {
+        font-size: 17px;
+        line-height: 30px;
+    }
+    .primary-btn a {
+        font-size: 17px;
+    }
+    .good-goals-container {
+        background-size: 900px;   
+    }
+} 
+@media(max-width: 775px) {
+    .good-goals-container {
+        background-size: 700px;   
+    }
+    .good-goals-image img {
+        width: 300px;
+        margin-left: -90px;
+    }
+}
+@media(max-width: 560px) {
+    .good-goals-container {
+        background-image: none;
+        margin-top: 0; 
+    }
+}
+@media(max-width: 510px) {
+    .good-goals-info {
+        margin-left: -50px;
+    }
+}
+@media(max-width: 390px) {
+    .good-goals-info {
+        margin-left: -100px;
+        padding-top: 50px;
+    }
+}
+
+
 @media(max-width: 840px) {
     .best-in-class-content {
         flex-direction: column;
