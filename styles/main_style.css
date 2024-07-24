@@ -1755,6 +1755,129 @@ abbr {
 
 
 
+
+.players-squad-container {
+    background-color: var(--backround-color);
+    padding-top: 120px;
+}
+.players-squad-contents {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.two-players-squad {
+    display: flex;
+}
+.player-squad-image img {
+    width: 300px;
+    transition: 0.5s;
+}
+
+.player-squad.ps-ed2 {
+    margin: 0 20px;
+}
+.player-squad.ps-ed4 {
+    margin-left: 20px;
+}
+
+.player-squad-info {
+    text-align: center;
+    margin-top: 10px;
+}
+.player-name a {
+    text-decoration: none;
+    color: white;
+    font-size: 23px;
+    transition: 0.3s;
+}
+.player-name a:hover {
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+.player-squad-post {
+    color: var(--secondary-color);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 7px;
+}
+
+
+@media(max-width: 1270px) {
+    .player-squad-image img {
+        width: 250px;
+    }
+}
+@media(max-width: 1110px) {
+    .players-squad-contents {
+        flex-direction: column;
+        align-items: center;
+    }
+    .two-players-squad.tps-ed2 {
+        margin-top: 50px;
+    }
+    .player-squad-image img {
+        width: 300px;
+    }
+    .player-squad.ps-ed2 {
+        margin-right: 0;
+    }
+}
+@media(max-width: 676px) {
+    .player-squad-image img {
+        width: 250px;
+    }
+}
+@media(max-width: 570px) {
+    .player-squad-image img {
+        width: 200px;
+    }
+}
+@media(max-width: 450px) {
+    .two-players-squad {
+        flex-direction: column;
+    }
+    .player-squad-image {
+        margin: 0;
+    }
+    .player-squad-image img {
+        width: 330px;
+    }
+    .player-squad.ps-ed4 {
+        margin-left: 0;
+        margin-top: 50px;
+    }
+    .player-squad.ps-ed2 {
+        margin-left: 0;
+        margin-top: 50px;
+    }
+}
+@media(max-width: 430px) {
+    .player-squad-image img {
+        width: 300px;
+    }
+}
+@media(max-width: 340px) {
+    .player-squad-image img {
+        width: 250px;
+    }
+}
+@media(max-width: 280px) {
+    .player-squad-image img {
+        width: 200px;
+    }
+}
+@media(max-width: 230px) {
+    .player-squad-image img {
+        width: 100%;
+    }
+    .players-squad-container {
+        padding: 0 10px;
+    }
+}
+
+
+
+
+
 /* javascript classes */
 .hidden {
     display: none;
