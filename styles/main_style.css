@@ -1759,6 +1759,7 @@ abbr {
 .players-squad-container {
     background-color: var(--backround-color);
     padding-top: 120px;
+    padding-bottom: 60px;
 }
 .players-squad-contents {
     display: flex;
@@ -1870,6 +1871,161 @@ abbr {
         width: 100%;
     }
     .players-squad-container {
+        padding: 0 10px;
+    }
+}
+
+
+
+
+.players-customers-container {
+    background-image: url('/images/img3.png');
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
+}
+.players-customers-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(29, 29, 29);
+    z-index: -1;
+}
+
+.main-player-customer-info-container {
+    width: 600px;
+}
+.player-customer-info-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.players-customer-logo img {
+    width: 500px;
+}
+.player-customer-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.main-angle-btn.ab-margin-left {
+    margin-left: 0;
+}
+.player-customer-name-type {
+    text-align: center;
+    line-height: 30px;
+    margin-top: 5px;
+    color: white;
+}
+.player-customer-name {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.player-customer-type {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.player-customer-text {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 17px;
+    line-height: 30px;
+    margin-top: 20px;
+    color: white;
+}
+.player-customer-mark {
+    font-size: 50px;
+    color: white;
+    margin-top: 5px;
+    text-align: center;
+}
+
+@media(max-width: 1150px) {
+    .players-customer-logo img {
+        width: 400px;
+    }
+    .main-player-customer-info-container {
+        width: 500px;
+        padding-top: 10px;
+    }
+    .player-customer-image img {
+        width: 150px;
+        height: 150px;
+    }
+    .players-customers-container {
+        height: 45vh;
+    }
+}
+@media(max-width: 960px) {
+    .players-customer-logo img {
+        width: 350px;
+    }
+}
+@media(max-width: 890px) {
+    .players-customers-container {
+        flex-direction: column;
+    }
+    .players-customer-logo img {
+        width: 500px;
+    }
+    .main-player-customer-info-container {
+        width: 600px;
+        margin-top: 20px;
+    }
+    .player-customer-image img {
+        width: 200px;
+        height: 200px;
+    }
+    .players-customers-container {
+        height: auto;
+        padding: 20px 0 0 0;
+    }
+}
+@media(max-width: 670px) {
+    .players-customer-logo img {
+        width: 400px;
+    }
+    .main-player-customer-info-container {
+        width: 500px;
+        padding-top: 10px;
+    }
+    .player-customer-image img {
+        width: 150px;
+        height: 150px;
+    }
+}
+@media(max-width: 545px) {
+    .players-customer-logo img {
+        width: 300px;
+    }
+    .main-player-customer-info-container {
+        width: 450px;
+        padding-top: 10px;
+    }
+    .player-customer-image img {
+        width: 150px;
+        height: 150px;
+    }
+}
+@media(max-width: 465px) {
+    .players-customer-logo img {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .main-player-customer-info-container {
+        width: 100%;
         padding: 0 10px;
     }
 }

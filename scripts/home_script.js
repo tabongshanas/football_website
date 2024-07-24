@@ -126,6 +126,4 @@ displayNav.addEventListener('click' , function() {
 menuDisplayIcon.addEventListener('click' , function() {
     menuContainer.classList.toggle('sliding-left-content');
     layer.classList.toggle('hidden');
-    menuMatchesContent.classList.add('hidden');
-    menuPlayersContent.classList.add('hidden');
 });
