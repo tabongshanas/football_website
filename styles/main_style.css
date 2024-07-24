@@ -1096,6 +1096,17 @@ li {
     width: 280px;
     padding: 10px;
     background-color: rgb(136, 135, 135);
+    cursor: pointer;
+}
+
+.team-game a {  
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.team-game a:hover {
+    cursor: pointer;
+    color: var(--secondary-color);
 }
 
 .team-content-info-header {
@@ -1216,6 +1227,168 @@ li {
         width: 100%;
     }
 }
+
+
+
+
+
+.best-in-class-container {
+    background-color: var(--backround-color);
+    padding-top: 120px;
+}
+.best-in-class-sub-header {
+    color: var(--secondary-color);
+    font-size: 27px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.best-in-class-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.two-best-in-class {
+    display: flex;
+}
+
+.trophy-container.ed2 {
+    margin: 0 50px;
+}
+.trophy-container.ed4 {
+    margin-left: 50px;
+} 
+
+.trophy-image {
+    background-color: var(--primary-light-color);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.trophy-image:hover img {
+    animation: rotate_trophy 0.6s ease-in forwards;
+}
+
+.trophy-image img {
+    width: 130px;
+}
+.trophy-value {
+    color: var(--secondary-color);
+    font-size: 50px;
+    text-align: center;
+    margin-top: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.trophy-user {
+    color: white;
+    font-size: 23px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@keyframes rotate_trophy {
+    from {
+        transform: rotateY(180deg);
+    }
+    to {
+        transform: rotateY(-180deg);
+    }
+}
+
+
+
+@media(max-width: 1030px) {
+    .trophy-image {
+        width: 150px;
+        height: 150px;
+    }
+    .trophy-image img {
+        width: 100px;
+    }
+    .trophy-value {
+        font-size: 40px;
+    }
+    .trophy-user {
+        font-size: 20px;
+    }
+}
+@media(max-width: 840px) {
+    .best-in-class-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .two-best-in-class.tbic2 {
+        margin-top: 40px;
+    } 
+    .trophy-container.ed2 {
+        margin-right: 0;
+    }
+    .trophy-image {
+        width: 200px;
+        height: 200px;
+    }
+    .trophy-image img {
+        width: 130px;
+    }
+    .trophy-value {
+        font-size: 50px;
+    }
+    .trophy-user {
+        font-size: 23px;
+    }
+}
+@media(max-width: 540px) {
+    .trophy-image {
+        width: 150px;
+        height: 150px;
+    }
+    .trophy-image img {
+        width: 100px;
+    }
+    .trophy-value {
+        font-size: 35px;
+    }
+    .trophy-user {
+        font-size: 20px;
+    }
+    .foot-header.fh1 {
+        text-align: center;
+    }
+}
+@media(max-width: 400px) {
+    .trophy-container.ed2 {
+        margin-left: 30px;
+    }
+    .trophy-container.ed4 {
+        margin-left: 30px;
+    } 
+}
+
+/* if trophy container disturbe open this is */
+/* @media(max-width: 360px) {
+    .trophy-image {
+        width: 100px;
+        height: 100px;
+    }
+    .trophy-image img {
+        width: 70px;
+    }
+    .trophy-value {
+        font-size: 35px;
+    }
+    .trophy-user {
+        font-size: 20px;
+    }
+    .foot-header.fh1 {
+        text-align: center;
+    }
+} */
 
 
 
