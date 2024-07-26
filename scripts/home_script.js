@@ -16,6 +16,12 @@ const menuDisplayIcon = document.getElementById('menu-display-icon');
 const layer = document.getElementById('layer');
 const displayNav = document.getElementById('display-nav');
 
+const search = document.getElementById('search');
+const searchInput = document.getElementById('search-input');
+
+const newsletterBtn = document.getElementById('newsletter-btn');
+const newsletterInput = document.getElementById('newsletter-input');
+
 // hebert classes clicking events
 const changePlayerRight = document.getElementById('change-player-right');
 const changePlayerLeft = document.getElementById('change-player-left');
@@ -73,12 +79,16 @@ currency.addEventListener('click' , function() {
     currencyContent.classList.toggle('hidden');
     languageContent.classList.add('hidden');
     shoppingContainer.classList.add('hidden');
+    searchInput.style = 'border: 1px solid transparent';
+    newsletterInput.style = 'border: 1px solid transparent';
 });
 
 language.addEventListener('click' , function() {    
     languageContent.classList.toggle('hidden');
     currencyContent.classList.add('hidden');
     shoppingContainer.classList.add('hidden');
+    searchInput.style = 'border: 1px solid transparent';
+    newsletterInput.style = 'border: 1px solid transparent';
 });
 
 
@@ -88,6 +98,8 @@ market.addEventListener('click' , function() {
     playersContent.classList.add('hidden');
     currencyContent.classList.add('hidden');
     languageContent.classList.add('hidden');
+    searchInput.style = 'border: 1px solid transparent';
+    newsletterInput.style = 'border: 1px solid transparent';
 });
 
 matchesLink.addEventListener('click' , function(e) {
@@ -138,6 +150,8 @@ displayNav.addEventListener('click' , function() {
     shoppingContainer.classList.add('hidden');
     currencyContent.classList.add('hidden');
     languageContent.classList.add('hidden');
+    searchInput.style = 'border: 1px solid transparent';
+    newsletterInput.style = 'border: 1px solid transparent';
 });
 
 menuDisplayIcon.addEventListener('click' , function() {
@@ -163,4 +177,36 @@ changePlayerLeft.addEventListener('click' , function() {
     shanasPlayerInfo.classList.remove('hidden');
     hebertText.classList.add('hidden');
     shanasText.classList.remove('hidden');
+});
+
+
+newsletterBtn.addEventListener('click' , function(e) {
+    e.preventDefault();
+    searchInput.style = 'border: 1px solid transparent';
+    shoppingContainer.classList.add('hidden');
+    currencyContent.classList.add('hidden');
+    languageContent.classList.add('hidden');
+
+    if (newsletterInput.value) {
+        newsletterInput.style = 'border: 1px solid transparent';
+    }
+    else {
+        newsletterInput.style = 'border: 1px solid red';
+    }
+});
+
+
+search.addEventListener('click' , function() {
+    newsletterInput.style = 'border: 1px solid transparent';
+    shoppingContainer.classList.add('hidden');
+    currencyContent.classList.add('hidden');
+    languageContent.classList.add('hidden');
+
+    if (searchInput.value) {
+        searchInput.style = 'border: 1px solid transparent';
+    }
+    else {
+        searchInput.style = 'border: 1px solid red';
+        search.style = 'padding-bottom: 12px';
+    }
 });

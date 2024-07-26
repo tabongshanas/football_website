@@ -65,10 +65,10 @@
                     <div class="search-nav-container">
                         <div class="search">
                             <div class="input">
-                                <input type="text" placeholder="Search...">
+                                <input id="search-input" type="text" placeholder="Search...">
                             </div>
                             <div class="search-icon">
-                                <i class="fa fa-search"></i>
+                                <i id="search" class="fa fa-search"></i>
                             </div>
                         </div>
                         <div class="market-container">
@@ -1072,94 +1072,306 @@
                     </div>
                 </div>
             </div>
+        
+
+            <div class="players-customers-container">
+                <div class="players-customer-logo">
+                    <img src="/images/kick-short.png" alt="">
+                </div>
+
+                <div class="main-player-customer-info-container">
+                    <div class="player-customer-info-container">
+                        <div class="player-customer-top">
+                            <div class="angle-btn">
+                                <button id="change-player-left" class="main-angle-btn ab-margin-left"><i class="fa fa-angle-left"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="player-customer-image-name">
+                            <!-- shanas image -->
+                            <div id="shanas-image" class="player-customer-image">
+                                <img src="/images/group.png" alt="">
+                            </div>
+
+                            <!-- hebert image -->
+                            <div id="hebert-image" class="player-customer-image">
+                                <img src="/images/medal.png" alt="">
+                            </div>
+
+                            <!-- shanas info -->
+                            <div id="shanas-player-info" class="player-customer-name-type">
+                                <p class="player-customer-name">
+                                    nkem. shanas
+                                </p>
+                                <p class="player-customer-type">
+                                    player
+                                </p>
+                            </div>
+
+                            <!-- hebert info -->
+                            <div id="hebert-player-info" class="player-customer-name-type">
+                                <p class="player-customer-name">
+                                    mahow hebert
+                                </p>
+                                <p class="player-customer-type">
+                                    player 
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="angle-btn">
+                            <button id="change-player-right" class="main-angle-btn right"><i class="fa fa-angle-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- shanas text -->
+                    <div id="shanas-text" class="player-customer-text">
+                        <p>
+                            lorem ipson, consectetur 
+                            adipiscing elit, sed do eiusmod tempor 
+                            incididunt ut  labore et dolore 
+                            magna aliqua. Quis ipsum suspendisse 
+                            ultrices gravida.
+                        </p>
+
+                        <div class="player-customer-mark">
+                            <p>
+                                "
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- hebert text -->
+                    <div id="hebert-text" class="player-customer-text">
+                        <p>
+                            hebert text dolor sit amet, consectetur 
+                            adipiscing elit, sed do eiusmod tempor 
+                            incididunt ut  labore et dolore 
+                            magna aliqua. Quis ipsum suspendisse 
+                            ultrices gravida.
+                        </p>
+                        <div class="player-customer-mark">
+                            <p>
+                                "
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div> 
         </section>
 
-        <div class="players-customers-container">
-            <div class="players-customer-logo">
-                <img src="/images/kick-short.png" alt="">
+
+
+
+        <section>
+            <div class="footer-container">
+                <div class="newsletter-display">
+                    <div class="nemsletter-container">
+                        <div class="nemsletter-icon-text">
+                            <div class="newsletter-icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="nemsletter-text">
+                                <p class="newsletter">
+                                    newsletter
+                                </p>
+                                <p class="newsletter-text-explan"> 
+                                    Get free 20% discount for all 
+                                    product on your first order.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="newsletter-input-subscribe">
+                            <div class="newsletter-input">
+                                <input id="newsletter-input" type="text" placeholder="Enter your E-mail">
+                            </div>
+                            <div class="primary-btn pb-ed1">
+                                <a id="newsletter-btn" href="">subscribe</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="horizontale-line-dash hld-ed"></div>
+                <div class="horizontale-line-dash"></div>
+
+                <div class="main-footer-content">
+                    <div class="footer-content">
+                        <div class="two-footer-content tfc-ed1">
+                            <div class="footer-link">
+                                <div class="footer-link-header">
+                                    <p>
+                                        contact
+                                    </p>
+                                </div>
+                                
+                                <div class="container-footer-link">
+                                    <div class="main-footer-link">
+                                        <i class="fa fa-map"></i>
+                                        <p>National park,d1 <br> 588436, <br> United States</p>
+                                    </div>
+                                    <div class="main-footer-link">
+                                        <i class="fa fa-phone"></i>
+                                        <p>+91 123 456 789</p>
+                                    </div>
+                                    <div class="main-footer-link">
+                                        <i class="fa fa-phone"></i>
+                                        <p>0123-456-789</p>
+                                    </div>
+                                    <div class="main-footer-link">
+                                        <i class="fa fa-map"></i>
+                                        <a href="">demo@Yourstore.com</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="footer-link fl-ed2">
+                                <div class="footer-link-header">
+                                    <p>
+                                        information
+                                    </p>
+                                </div>
+                                
+                                <div class="container-footer-link">
+                                    <div class="main-footer-link">
+                                        <a href="">about us</a>
+                                    </div>
+                                    <div class="main-footer-link">
+                                        <a href="">Delivery Information</a>
+                                    </div>
+                                    <div class="main-footer-link">
+                                        <a href="">Privacy Policy</a>
+                                    </div>
+                                    <div class="main-footer-link">
+                                        <a href="">Terms & Conditions</a>
+                                    </div>
+                                    <div class="main-footer-link">
+                                        <a href="">Site Map</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="footer-link fl-ed3">
+                                <div class="footer-link-header">
+                                    <p>
+                                        extras
+                                    </p>
+                                </div>
+                                
+                                <div class="container-footer-link">
+                                    <div class="main-footer-link">
+                                        <a href="">Brands</a>
+                                    </div>
+                                    <div class="main-footer-link">
+                                        <a href="">Gift Certificates</a>
+                                    </div>
+                                    <div class="main-footer-link">
+                                        <a href="">Affiliate</a>
+                                    </div>
+                                    <div class="main-footer-link">
+                                        <a href="">Specials</a>
+                                    </div>
+                                    <div class="main-footer-link">
+                                        <a href="">Site Map</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="two-footer-content tfc-ed2">
+                            <div class="footer-link fl-ed4">
+                                <div class="footer-link-header">
+                                    <p>
+                                        my account
+                                    </p>
+                                </div>
+                                
+                                <div class="container-footer-link">
+                                    <div class="main-footer-link">
+                                        <a href="">my account</a>
+                                    </div>
+                                    <div class="main-footer-link">
+                                        <a href="">Order History</a>
+                                    </div>
+                                    <div class="main-footer-link">
+                                        <a href="">Wish List</a>
+                                    </div>
+                                    <div class="main-footer-link">
+                                        <a href="">Newsletter</a>
+                                    </div>
+                                    <div class="main-footer-link">
+                                        <a href="">Returns</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="footer-link fl-ed5">
+                                <div class="footer-link-header">
+                                    <p>
+                                        Find Us On
+                                    </p>
+                                </div>
+                                
+                                <div class="container-footer-link cfl-ed1">
+                                    <div class="icon">
+                                        <a href=""><i class="fa fa-facebook"></i></a>
+                                    </div>
+                                    <div class="icon">
+                                        <a href=""><i class="fa fa-instagram"></i></a>
+                                    </div>
+                                    <div class="icon">
+                                        <a href=""><i class="fa fa-twitter"></i></a>
+                                    </div>
+                                    <div class="icon">
+                                        <a href=""><i class="fa fa-whatsapp"></i></a>
+                                    </div>
+                                    <div class="icon">
+                                        <a href=""><i class="fa fa-youtube"></i></a>
+                                    </div>
+                                </div>
+
+
+                                <div class="footer-link-header flh-ed1">
+                                    <p>
+                                        pay with
+                                    </p>
+                                </div>
+                                
+                                <div class="container-footer-link cfl-ed1">
+                                    <div class="icon">
+                                        <a href=""><i class="fa fa-facebook"></i></a>
+                                    </div>
+                                    <div class="icon">
+                                        <a href=""><i class="fa fa-instagram"></i></a>
+                                    </div>
+                                    <div class="icon">
+                                        <a href=""><i class="fa fa-twitter"></i></a>
+                                    </div>
+                                    <div class="icon">
+                                        <a href=""><i class="fa fa-whatsapp"></i></a>
+                                    </div>
+                                    <div class="icon">
+                                        <a href=""><i class="fa fa-youtube"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                    </div>
+
+                    <div class="horizontal3-line"></div>
+
+                    <div class="copyright">
+                        Copyright <i class="fa fa-copyright"></i> 2024 All right reserved | This template is made with <i class="fa fa-heart"></i> by <a href="">shanas</a>
+                    </div>
+                </div>
+
             </div>
-
-            <div class="main-player-customer-info-container">
-                <div class="player-customer-info-container">
-                    <div class="player-customer-top">
-                        <div class="angle-btn">
-                            <button id="change-player-left" class="main-angle-btn ab-margin-left"><i class="fa fa-angle-left"></i></button>
-                        </div>
-                    </div>
-
-                    <div class="player-customer-image-name">
-                        <!-- shanas image -->
-                        <div id="shanas-image" class="player-customer-image">
-                            <img src="/images/group.png" alt="">
-                        </div>
-
-                        <!-- hebert image -->
-                        <div id="hebert-image" class="player-customer-image">
-                            <img src="/images/medal.png" alt="">
-                        </div>
-
-                        <!-- shanas info -->
-                        <div id="shanas-player-info" class="player-customer-name-type">
-                            <p class="player-customer-name">
-                                nkem. shanas
-                            </p>
-                            <p class="player-customer-type">
-                                player
-                            </p>
-                        </div>
-
-                        <!-- hebert info -->
-                        <div id="hebert-player-info" class="player-customer-name-type">
-                            <p class="player-customer-name">
-                                mahow hebert
-                            </p>
-                            <p class="player-customer-type">
-                                player 
-                            </p>
-                        </div>
-
-                    </div>
-
-                    <div class="angle-btn">
-                        <button id="change-player-right" class="main-angle-btn right"><i class="fa fa-angle-right"></i></button>
-                    </div>
-                </div>
-
-                <!-- shanas text -->
-                <div id="shanas-text" class="player-customer-text">
-                    <p>
-                        lorem ipson, consectetur 
-                        adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut  labore et dolore 
-                        magna aliqua. Quis ipsum suspendisse 
-                        ultrices gravida.
-                    </p>
-
-                    <div class="player-customer-mark">
-                        <p>
-                            "
-                        </p>
-                    </div>
-                </div>
-
-                <!-- hebert text -->
-                <div id="hebert-text" class="player-customer-text">
-                    <p>
-                        hebert text dolor sit amet, consectetur 
-                        adipiscing elit, sed do eiusmod tempor 
-                        incididunt ut  labore et dolore 
-                        magna aliqua. Quis ipsum suspendisse 
-                        ultrices gravida.
-                    </p>
-                    <div class="player-customer-mark">
-                        <p>
-                            "
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        </section>
 
 
         <script src="/scripts/home_script.js"></script>
