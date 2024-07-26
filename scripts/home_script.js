@@ -210,3 +210,19 @@ search.addEventListener('click' , function() {
         search.style = 'padding-bottom: 12px';
     }
 });
+
+
+searchInput.addEventListener('click' , function() {
+    newsletterInput.style = 'border: 1px solid transparent';
+    shoppingContainer.classList.add('hidden');
+    currencyContent.classList.add('hidden');
+    languageContent.classList.add('hidden');
+});
+
+
+newsletterInput.addEventListener('click' , function() {
+    newsletterInput.style = 'border: 1px solid transparent';
+    shoppingContainer.classList.add('hidden');
+    currencyContent.classList.add('hidden');
+    languageContent.classList.add('hidden');
+});
