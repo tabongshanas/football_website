@@ -1,6 +1,5 @@
 "use strick"
 
-// selecting elements to apply click
 const currency = document.getElementById('currency');
 const language = document.getElementById('language');
 
@@ -22,10 +21,7 @@ const searchInput = document.getElementById('search-input');
 const newsletterBtn = document.getElementById('newsletter-btn');
 const newsletterInput = document.getElementById('newsletter-input');
 
-// hebert classes clicking events
-const changePlayerRight = document.getElementById('change-player-right');
-const changePlayerLeft = document.getElementById('change-player-left');
-
+const sendBtn = document.getElementById('send-btn');
 
 // selecting elements to hidden waiting for click
 const playersContent = document.querySelector('.players-content');
@@ -42,12 +38,6 @@ const menuTopPlayersContent = document.getElementById('menu-top-players-content'
 
 const menuContainer = document.querySelector('.menu-container');
 
-const hebertImage = document.getElementById('hebert-image');
-const shanasImage = document.getElementById('shanas-image');
-const hebertPlayerInfo = document.getElementById('hebert-player-info');
-const shanasPlayerInfo = document.getElementById('shanas-player-info');
-const hebertText = document.getElementById('hebert-text');
-const shanasText = document.getElementById('shanas-text');
 
 
 // reseting values in HTML
@@ -65,12 +55,6 @@ menuTopPlayersContent.classList.add('hidden');
 
 menuContainer.classList.add('sliding-left-content');
 layer.classList.add('hidden');
-
-
-// hebert player classes
-hebertImage.classList.add('hidden');
-hebertPlayerInfo.classList.add('hidden');
-hebertText.classList.add('hidden');
 
 
 
@@ -171,26 +155,6 @@ menuDisplayIcon.addEventListener('click' , function() {
 });
 
 
-// hebert shanas functionnality
-changePlayerRight.addEventListener('click' , function() {
-    shanasImage.classList.add('hidden');
-    hebertImage.classList.remove('hidden');
-    hebertPlayerInfo.classList.remove('hidden');
-    shanasPlayerInfo.classList.add('hidden');
-    hebertText.classList.remove('hidden');
-    shanasText.classList.add('hidden');
-});
-
-changePlayerLeft.addEventListener('click' , function() {
-    shanasImage.classList.remove('hidden');
-    hebertImage.classList.add('hidden');
-    hebertPlayerInfo.classList.add('hidden');
-    shanasPlayerInfo.classList.remove('hidden');
-    hebertText.classList.add('hidden');
-    shanasText.classList.remove('hidden');
-});
-
-
 newsletterBtn.addEventListener('click' , function(e) {
     e.preventDefault();
     searchInput.style = 'border: 1px solid transparent';
@@ -236,4 +200,11 @@ newsletterInput.addEventListener('click' , function() {
     shoppingContainer.classList.add('hidden');
     currencyContent.classList.add('hidden');
     languageContent.classList.add('hidden');
+});
+
+
+
+sendBtn.addEventListener ('click' , function(e) {
+    e.preventDefault();
+    console.log("working");
 });

@@ -1886,7 +1886,7 @@ abbr {
 
 .players-customers-container {
     background-image: url('/images/img3.png');
-    height: 50vh;
+    height: 70vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1970,9 +1970,6 @@ abbr {
         width: 150px;
         height: 150px;
     }
-    .players-customers-container {
-        height: 45vh;
-    }
 }
 @media(max-width: 960px) {
     .players-customer-logo img {
@@ -2042,6 +2039,7 @@ abbr {
 
 .footer-container {
     background-color: var(--backround-color);
+    padding-top: 100px;
 }
 
 .nemsletter-container {
@@ -2050,7 +2048,7 @@ abbr {
     align-items: center;
     margin: 0 30px;
     border-radius: 10px;
-    background-color: #535353;
+    background-color: #272727da;
     padding: 20px 10px;
     width: 100%;
 }
@@ -2188,6 +2186,9 @@ abbr {
     background-color: white;
     transition: 0.3s;
     margin: 5px;
+}
+.resize-icon a i {
+    font-size: 23px;
 }
 .icon a i:hover {
     background-color: var(--secondary-color);
