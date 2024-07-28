@@ -22,6 +22,17 @@ const newsletterBtn = document.getElementById('newsletter-btn');
 const newsletterInput = document.getElementById('newsletter-input');
 
 const sendBtn = document.getElementById('send-btn');
+const firstName = document.getElementById('first-name'); 
+const lastName = document.getElementById('last-name'); 
+const phoneNumber = document.getElementById('phone-number'); 
+const email = document.getElementById('email'); 
+const contactMessage = document.getElementById('contact-message'); 
+const contactErrorMessageF = document.querySelector('.contact-error-message-first');
+const contactErrorMessageL = document.querySelector('.contact-error-message-last');
+const contactErrorMessageNumber = document.querySelector('.contact-error-message-number');
+const contactErrorMessageEmail = document.querySelector('.contact-error-message-email');
+const contactErrorMessageMessage = document.querySelector('.contact-error-message-message');
+const contactErrorMessageSuccess = document.querySelector('.contact-error-message-success');
 
 // selecting elements to hidden waiting for click
 const playersContent = document.querySelector('.players-content');
@@ -55,6 +66,13 @@ menuTopPlayersContent.classList.add('hidden');
 
 menuContainer.classList.add('sliding-left-content');
 layer.classList.add('hidden');
+
+contactErrorMessageF.classList.add('hidden');
+contactErrorMessageL.classList.add('hidden');
+contactErrorMessageNumber.classList.add('hidden');
+contactErrorMessageEmail.classList.add('hidden');
+contactErrorMessageMessage.classList.add('hidden');
+contactErrorMessageSuccess.classList.add('hidden');
 
 
 
@@ -206,5 +224,68 @@ newsletterInput.addEventListener('click' , function() {
 
 sendBtn.addEventListener ('click' , function(e) {
     e.preventDefault();
-    console.log("working");
+    contactErrorMessageSuccess.classList.add('hidden');
+    if (firstName.value) {
+        console.log('working');
+        contactErrorMessageF.classList.add('hidden');
+        firstName.style = 'border-bottom: 1px solid white';
+    }
+    else {
+        console.log('not working');
+        contactErrorMessageF.classList.remove('hidden');
+        firstName.style = 'border-bottom: 1px solid red';
+    }
+
+    if (lastName.value) {
+        console.log('working');
+        contactErrorMessageL.classList.add('hidden');
+        lastName.style = 'border-bottom: 1px solid white';
+    }
+    else {
+        console.log('not working');
+        contactErrorMessageL.classList.remove('hidden');
+        lastName.style = 'border-bottom: 1px solid red';
+    }
+
+    if (phoneNumber.value) {
+        console.log('working');
+        contactErrorMessageNumber.classList.add('hidden');
+        phoneNumber.style = 'border-bottom: 1px solid white';
+    }
+    else {
+        console.log('not working');
+        contactErrorMessageNumber.classList.remove('hidden');
+        phoneNumber.style = 'border-bottom: 1px solid red';
+    }
+
+    if (email.value) {
+        console.log('working');
+        contactErrorMessageEmail.classList.add('hidden');
+        email.style = 'border-bottom: 1px solid white';
+    }
+    else {
+        console.log('not working');
+        contactErrorMessageEmail.classList.remove('hidden');
+        email.style = 'border-bottom: 1px solid red';
+    }
+
+    if (contactMessage.value) {
+        console.log('working');
+        contactErrorMessageMessage.classList.add('hidden');
+        contactMessage.style = 'border-bottom: 1px solid white';
+    }
+    else {
+        console.log('not working');
+        contactErrorMessageMessage.classList.remove('hidden');
+        contactMessage.style = 'border: 1px solid red';
+    }
+
+    if (firstName.value && lastName.value && phoneNumber.value && email.value && contactMessage.value) {
+        contactErrorMessageSuccess.classList.remove('hidden');
+        firstName.value = '';
+        lastName.value = '';
+        phoneNumber.value = '';
+        email.value = '';
+        contactMessage.value = '';
+    }
 });
