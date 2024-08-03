@@ -690,6 +690,7 @@ abbr {
     background-color: #444444;
     padding: 12px 10px 30px 10px;
     border-radius: 10px;
+    border: 1px solid transparent;
     transition: 0.5s;
 }
 
@@ -1086,6 +1087,7 @@ abbr {
     width: 300px;
     transition: 0.3s;
     border-radius: 10px;
+    border: 1px solid transparent;
 }
 .main-content-container:hover {
     border: 1px solid var(--secondary-color);

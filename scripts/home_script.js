@@ -12,6 +12,8 @@ const playersLink = document.getElementById('players-link');
 const menuPlayersLink = document.getElementById('menu-players-link');
 const menuTopPlayerLink = document.getElementById('menu-top-player-link');
 
+const landingPageContent = document.querySelector('.landing-page-content');
+
 const menuDisplayIcon = document.getElementById('menu-display-icon');
 const layer = document.getElementById('layer');
 const displayNav = document.getElementById('display-nav');
@@ -168,6 +170,15 @@ displayNav.addEventListener('click' , function() {
 menuDisplayIcon.addEventListener('click' , function() {
     menuContainer.classList.toggle('sliding-left-content');
     layer.classList.toggle('hidden');
+});
+
+layer.addEventListener('click' , function() {
+    menuContainer.classList.add('sliding-left-content');
+    layer.classList.add('hidden');
+});
+
+landingPageContent.addEventListener('click' , function() {
+    shoppingContainer.classList.add('hidden');
 });
 
 
