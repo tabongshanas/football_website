@@ -50,6 +50,16 @@ const menuTopPlayersContent = document.getElementById('menu-top-players-content'
 const menuContainer = document.querySelector('.menu-container');
 
 
+// rate selecting El
+const rateContainer = document.querySelector('.rate-container');
+const rate = document.getElementById('rate');
+const rateBtn = document.getElementById('rate-btn');
+const rateLatter = document.getElementById('rate-latter');
+const rateLayer = document.querySelector('.rate-layer');
+
+rateContainer.classList.toggle('rate--hidden');
+
+
 
 // reseting values in HTML
 currencyContent.classList.add('hidden');
@@ -74,6 +84,14 @@ contactErrorMessageEmail.classList.add('hidden');
 contactErrorMessageMessage.classList.add('hidden');
 contactErrorMessageSuccess.classList.add('hidden');
 
+const loader = document.querySelector('.loader');
+
+
+window.addEventListener('load' , function() {
+    window.setTimeout(function() {
+        loader.classList.add('hidden--delay');
+    }  , 6000);
+});
 
 
 // appling clicking event
@@ -157,7 +175,8 @@ menuTopPlayerLink.addEventListener('click' , function(e) {
 
 
 // nav bar functionnality
-displayNav.addEventListener('click' , function() {
+displayNav.addEventListener('click' , function(e) {
+    e.preventDefault;
     menuContainer.classList.toggle('sliding-left-content');
     layer.classList.toggle('hidden');
     shoppingContainer.classList.add('hidden');
@@ -167,7 +186,8 @@ displayNav.addEventListener('click' , function() {
     newsletterInput.style = 'border: 1px solid transparent';
 });
 
-menuDisplayIcon.addEventListener('click' , function() {
+menuDisplayIcon.addEventListener('click' , function(e) {
+    e.preventDefault;
     menuContainer.classList.toggle('sliding-left-content');
     layer.classList.toggle('hidden');
 });
@@ -289,3 +309,68 @@ sendBtn.addEventListener ('click' , function(e) {
         contactMessage.value = '';
     }
 });
+
+
+
+
+// rating javascript functionnality
+
+
+window.setTimeout(function () {
+    rateContainer.classList.toggle('rate--bring');
+} , 7000);
+
+rate.addEventListener('click' , function(e) {
+    e.preventDefault();
+    rateContainer.classList.toggle('rate--bring');
+    rateContainer.classList.remove('rate--remove');
+});
+
+rateBtn.addEventListener('click' , function(e) {
+    e.preventDefault();
+    rateContainer.classList.toggle('rate--bring');
+    rateContainer.classList.remove('rate--remove');
+});
+
+rateLayer.addEventListener('click' , function (e) {
+  e.preventDefault();
+  rateContainer.classList.toggle('rate--bring');
+});
+
+rateBtn.addEventListener('click' , function (e) {
+  e.preventDefault();
+  // rateContainer.classList.toggle('rate--remove');
+  const rateResult = confirm("Thanks for Rating!\nAre you sure that's your rating?\nCancel --> No\nOK --> Yes");
+
+  if (rateResult) {
+      rateContainer.classList.toggle('rate--remove');
+      alert('Thanks for the Rate!');
+  }
+  else {
+      rateContainer.classList.toggle('rate--hidden');
+  }
+
+});
+
+rateLayer.addEventListener('click' , function (e) {
+  e.preventDefault();
+  rateContainer.classList.toggle('rate--remove');
+});
+
+rateLatter.addEventListener('click' , function (e) {
+  e.preventDefault();
+  rateContainer.classList.toggle('rate--remove');
+});
+
+window.addEventListener('keydown' , (e) => {
+  e.preventDefault();
+  if (e.key === 'Escape') {
+    rateContainer.classList.add('rate--remove');
+    alert('Your rate has not been save!');
+  }
+
+  else if (e.key === 'r' && e.shiftKey) {
+    rateContainer.classList.toggle('rate--hidden');
+  }
+});
+

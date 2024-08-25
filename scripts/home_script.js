@@ -24,6 +24,8 @@ const searchInput = document.getElementById('search-input');
 const newsletterBtn = document.getElementById('newsletter-btn');
 const newsletterInput = document.getElementById('newsletter-input');
 
+const loader = document.querySelector('.loader');
+
 // hebert classes clicking events
 const changePlayerRight = document.getElementById('change-player-right');
 const changePlayerLeft = document.getElementById('change-player-left');
@@ -52,6 +54,16 @@ const hebertText = document.getElementById('hebert-text');
 const shanasText = document.getElementById('shanas-text');
 
 
+// rate selecting El
+const rateContainer = document.querySelector('.rate-container');
+const rate = document.getElementById('rate');
+const rateBtn = document.getElementById('rate-btn');
+const rateLatter = document.getElementById('rate-latter');
+const rateLayer = document.querySelector('.rate-layer');
+
+rateContainer.classList.toggle('rate--hidden');
+
+
 // reseting values in HTML
 currencyContent.classList.add('hidden');
 languageContent.classList.add('hidden');
@@ -73,6 +85,14 @@ layer.classList.add('hidden');
 hebertImage.classList.add('hidden');
 hebertPlayerInfo.classList.add('hidden');
 hebertText.classList.add('hidden');
+
+
+
+window.addEventListener('load' , function() {
+    window.setTimeout(function() {
+        loader.classList.add('hidden--delay');
+    }  , 6000);
+});
 
 
 
@@ -248,3 +268,67 @@ newsletterInput.addEventListener('click' , function() {
     currencyContent.classList.add('hidden');
     languageContent.classList.add('hidden');
 });
+
+
+
+// rating javascript functionnality
+
+
+window.setTimeout(function () {
+    rateContainer.classList.toggle('rate--bring');
+} , 7000);
+
+rate.addEventListener('click' , function(e) {
+    e.preventDefault();
+    rateContainer.classList.toggle('rate--bring');
+    rateContainer.classList.remove('rate--remove');
+});
+
+rateBtn.addEventListener('click' , function(e) {
+    e.preventDefault();
+    rateContainer.classList.toggle('rate--bring');
+    rateContainer.classList.remove('rate--remove');
+});
+
+rateLayer.addEventListener('click' , function (e) {
+  e.preventDefault();
+  rateContainer.classList.toggle('rate--bring');
+});
+
+rateBtn.addEventListener('click' , function (e) {
+  e.preventDefault();
+  // rateContainer.classList.toggle('rate--remove');
+  const rateResult = confirm("Thanks for Rating!\nAre you sure that's your rating?\nCancel --> No\nOK --> Yes");
+
+  if (rateResult) {
+      rateContainer.classList.toggle('rate--remove');
+      alert('Thanks for the Rate!');
+  }
+  else {
+      rateContainer.classList.toggle('rate--hidden');
+  }
+
+});
+
+rateLayer.addEventListener('click' , function (e) {
+  e.preventDefault();
+  rateContainer.classList.toggle('rate--remove');
+});
+
+rateLatter.addEventListener('click' , function (e) {
+  e.preventDefault();
+  rateContainer.classList.toggle('rate--remove');
+});
+
+window.addEventListener('keydown' , (e) => {
+  e.preventDefault();
+  if (e.key === 'Escape') {
+    rateContainer.classList.add('rate--remove');
+    alert('Your rate has not been save!');
+  }
+
+  else if (e.key === 'r' && e.shiftKey) {
+    rateContainer.classList.toggle('rate--hidden');
+  }
+});
+

@@ -37,6 +37,15 @@ const menuTopPlayersContent = document.getElementById('menu-top-players-content'
 const menuContainer = document.querySelector('.menu-container');
 
 
+const loader = document.querySelector('.loader');
+
+
+window.addEventListener('load' , function() {
+    window.setTimeout(function() {
+        loader.classList.add('hidden--delay');
+    }  , 6000);
+});
+
 
 // reseting values in HTML
 currencyContent.classList.add('hidden');

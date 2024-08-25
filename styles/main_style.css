@@ -21,6 +21,93 @@ abbr {
 }
 
 
+.loader {
+    /* background-color: #333; */
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/gif/goal-scole.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1000;
+    padding-top: 10px;
+    overflow: hidden;
+    position: fixed;
+    transition: 0.75s;
+
+    animation: move-lodaer-text 10s linear infinite;
+}
+.loader-text {
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    letter-spacing: 3px;
+    color: var(--backround-color);
+    line-height: 40px;
+    white-space: nowrap;
+}
+.loader-text i {
+    color: var(--primary-color);
+}
+.loader-logo {
+    color: var(--secondary-color);
+    display: block;
+}
+.loader::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    text-transform: uppercase;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+    letter-spacing: 3px;
+    color: white;
+}
+
+@keyframes move-lodaer-text {
+    from {
+        padding-left: 0;
+    }
+    to {
+        padding-left: 100%;
+    }
+}
+@keyframes move-lodaer-text-respon {
+    0% {
+        padding-left: 0%;
+    }
+    /* 50% {
+        padding-left: 100%;
+    } */
+    100% {
+        padding-left: 0%;
+    }
+}
+
+.hidden--delay {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media(max-width: 570px) {
+    .loader-text {
+        font-size: 20px;
+        font-weight: 900;
+        /* white-space: wrap; */
+
+        animation: move-lodaer-text-respon 4s linear infinite;
+    }
+    .break {
+        display: block;
+    }
+}
+@media(max-width: 890px) {
+    .loader {
+        background-size: 100% 100%;
+    }
+}
+
+
 .landing-page-top-container {
     background-color: var(--grey-color);
     color: white;
@@ -946,6 +1033,33 @@ abbr {
     .series-content.grid {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+    .series-content .ch-year {
+        display: block;
+    }
+}
+@media(max-width: 480px) {
+    .series-content .ch-year {
+        display: block;
+    }
+}
+
+
+
+.rate--remove {
+    display: none;
+}
+.rate--hidden {
+    top: -50%;
+    left: -50%;
+    transform: translate(-50% , -50%);
+    opacity: 0;
+}
+.rate--bring {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    opacity: 1;
+    transition: 0.2s;
 }
 
 
@@ -2103,7 +2217,7 @@ abbr {
     color: white;
     caret-color: var(--secondary-color);
     background-color: #383838d8;
-    border: none;
+    border: 1px solid transparent;
 }
 .newsletter-subcribe a {
     text-decoration: none;
