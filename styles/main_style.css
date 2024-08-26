@@ -1045,25 +1045,6 @@ abbr {
 
 
 
-.rate--remove {
-    display: none;
-}
-.rate--hidden {
-    top: -50%;
-    left: -50%;
-    transform: translate(-50% , -50%);
-    opacity: 0;
-}
-.rate--bring {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% , -50%);
-    opacity: 1;
-    transition: 0.2s;
-}
-
-
-
 
 .out-team-store-container {
     background-color: var(--backround-color);
